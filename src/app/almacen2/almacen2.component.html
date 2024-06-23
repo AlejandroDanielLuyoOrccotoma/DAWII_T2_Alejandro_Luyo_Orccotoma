@@ -1,0 +1,19 @@
+<div class="almacen-container">
+    <h2>Calculadora de Precios del Almacén N° 2</h2>
+    <p>Si el valor a pagarse es mayor a $200, tienes un descuento</p>
+    <form (ngSubmit)="calcularTotal()">
+      <mat-form-field>
+        <mat-label>Precio Unitario</mat-label>
+        <input matInput type="number" [(ngModel)]="precioUnitario" name="precioUnitario" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Cantidad</mat-label>
+        <input matInput type="number" [(ngModel)]="cantidad" name="cantidad" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Calcular</button>
+    </form>
+    <div *ngIf="total !== null">
+      <p>El total a pagar es: $ {{ total | number:'1.2-2' }}</p>
+    </div>
+  </div>
+  
