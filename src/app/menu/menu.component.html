@@ -1,3 +1,15 @@
-<mat-toolbar>
-   <h1>Bienvenido</h1>
-</mat-toolbar>
+<mat-toolbar color="primary">
+    <span>Bienvenido</span>
+  </mat-toolbar>
+  <nav class="menu-container">
+    <ul>
+      <li><a routerLink="/estacionamiento" routerLinkActive="active-link">Estacionamiento</a></li>
+      <li><a routerLink="/alumno" routerLinkActive="active-link">Alumno</a></li>
+      <li><a routerLink="/almacen" routerLinkActive="active-link">Almacén</a></li>
+      <li><a routerLink="/login" routerLinkActive="active-link">Cerrar Sesión</a></li>
+    </ul>
+  </nav>
+  <div class="content-container">
+    <router-outlet></router-outlet>
+  </div>
+  
