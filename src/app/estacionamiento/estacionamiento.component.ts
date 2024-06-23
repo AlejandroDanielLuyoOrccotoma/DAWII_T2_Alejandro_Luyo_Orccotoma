@@ -18,6 +18,6 @@ export class EstacionamientoComponent {
   calcularTarifa() {
     let totalHoras = this.horas + this.minutos / 60;
     totalHoras = Math.ceil(totalHoras); 
-    this.tarifa = totalHoras * 1.5; 
+    this.tarifa = totalHoras * 1500; 
   }
 }
